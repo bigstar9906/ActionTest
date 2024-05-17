@@ -30,6 +30,7 @@ jobs:
           script: |
             cd ActionTest
             git pull
+            chmod +x gradlew
             ./gradlew clean build
             cd build/libs
             nohup java -jar ActionTest-0.0.1-SNAPSHOT.jar &
