@@ -35,8 +35,7 @@ jobs:
             ./gradlew clean build
             cd build/libs
             nohup java -jar demo-0.0.1-SNAPSHOT.jar &
-            kill -2
-
+            exit
       - name: Remove Github Actions IP From Security Group
         run: |
           aws ec2 revoke-security-group-ingress --group-id ${{ secrets.AWS_SG_ID }} --protocol tcp --port 22 --cidr ${{ steps.ip.outputs.ipv4 }}/32
