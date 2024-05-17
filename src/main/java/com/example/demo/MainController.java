@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
+    @ResponseBody
     @RequestMapping("/")
     public String index() {
-        return "test";
+        return "화면이 없는 REST API 서버입니다.";
     }
 
 
