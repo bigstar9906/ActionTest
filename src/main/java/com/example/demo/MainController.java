@@ -11,6 +11,12 @@ public class MainController {
         return "test";
     }
 
+
+    @RequestMapping("/test")
+    public String test() {
+        return "test2";
+    }
+
     @ResponseBody
     @RequestMapping("/error1")
     public String error() {
