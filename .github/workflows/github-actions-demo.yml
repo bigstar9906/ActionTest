@@ -34,7 +34,7 @@ jobs:
             chmod +x gradlew
             ./gradlew clean build
             cd build/libs
-            nohup java -jar demo-0.0.1-SNAPSHOT.jar & ; ls
+            nohup java -jar demo-0.0.1-SNAPSHOT.jar & echo $! > pid.txt
 
       - name: Remove Github Actions IP From Security Group
         run: |
