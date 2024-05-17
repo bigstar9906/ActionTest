@@ -30,6 +30,7 @@ jobs:
           script: |
             cd ActionTest
             git pull
+            fuser -k ${{ secrets.AWS_SERVER_PORT }}/tcp || true
             chmod +x gradlew
             ./gradlew clean build
             cd build/libs

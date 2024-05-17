@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
     @RequestMapping("/")
     public String index() {
-        return "index";
+        return "test";
     }
 
     @ResponseBody
     @RequestMapping("/error1")
     public String error() {
-        return "error";
+        return "error1234";
     }
 }
