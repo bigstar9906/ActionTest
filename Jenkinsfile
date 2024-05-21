@@ -18,8 +18,9 @@ pipeline {
                 ./gradlew build
                 cd build/libs
                 ls
-                export BUILD_ID=dontKillMe
-                nohup java -jar demo-0.0.1-SNAPSHOT.jar &
+                export JENKINS_NODE_COOKIE=dontKillMe
+                echo "nohup java -jar demo-0.0.1-SNAPSHOT.jar &" > start-jar-in-background.sh
+                sh start-jar-in-background.sh
                 '''
 		}
 	}	 
