@@ -1,3 +1,4 @@
+//prettier-ignore
 pipeline {
     agent any
     
@@ -12,6 +13,7 @@ pipeline {
 	stage('test'){
 		steps{
 			echo 'Testing...'
+            echo 'Testing2...'
 		}
 	}	 
    	}
