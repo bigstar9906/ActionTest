@@ -15,6 +15,7 @@ pipeline {
 			echo 'Testing...'
             echo 'Testing2...'
             echo 'Testing3...'
+            echo 'ReClone?'
 		}
 	}	 
    	}
