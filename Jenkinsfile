@@ -17,6 +17,7 @@ pipeline {
                 chmod +x gradlew
                 ./gradlew clean build
                 cd build/libs
+                ls
                 nohup java -jar demo-0.0.1-SNAPSHOT.jar > nohup.out 2> nohup.err < /dev/null &
                 '''
 		}
