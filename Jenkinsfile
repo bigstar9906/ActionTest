@@ -12,7 +12,7 @@ pipeline {
         
 	stage('test'){
 		steps{
-			fuser -k 8080/tcp ||true
+			sudo fuser -k 8080/tcp || true
             chmod +x gradlew
             ./gradlew clean build
             cd build/libs
