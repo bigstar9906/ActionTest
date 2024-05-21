@@ -12,7 +12,7 @@ pipeline {
         
 	stage('test'){
 		steps{
-			fuser -k ${{ secrets.AWS_SERVER_PORT }}/tcp || true
+			fuser -k 8080/tcp || true
             chmod +x gradlew
             ./gradlew clean build
             cd build/libs

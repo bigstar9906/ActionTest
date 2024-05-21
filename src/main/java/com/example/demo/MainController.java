@@ -9,7 +9,8 @@ public class MainController {
     @ResponseBody
     @RequestMapping("/")
     public String index() {
-        return "화면이 없는 REST API 서버입니다. 여기는 HTML 없어요";
+        
+        return "화면이 없는 REST API 서버입니다. 여기는 HTML 없어요!!";
     }
 
 
