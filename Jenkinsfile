@@ -14,11 +14,10 @@ pipeline {
 		steps{
              sh '''
                 fuser -k 8080/tcp || true
-                chmod +x gradlew
-                ./gradlew clean build
+                sudo chmod +x gradlew
+                ./gradlew build
                 cd build/libs
                 ls
-                chmod +x demo-0.0.1-SNAPSHOT.jar
                 export BUILD_ID=dontKillMe
                 nohup java -jar demo-0.0.1-SNAPSHOT.jar &
                 '''
