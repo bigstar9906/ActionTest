@@ -13,11 +13,11 @@ pipeline {
 	stage('test'){
 		steps{
              sh '''
-                fuser -k 8080/tcp
-#               chmod +x gradlew
-#               ./gradlew clean build
-#               cd build/libs
-#               nohup java -jar demo-0.0.1-SNAPSHOT.jar > nohup.out 2> nohup.err < /dev/null &
+                fuser -k 8080/tcp || true
+                chmod +x gradlew
+                ./gradlew clean build
+                cd build/libs
+                nohup java -jar demo-0.0.1-SNAPSHOT.jar > nohup.out 2> nohup.err < /dev/null &
                 '''
 		}
 	}	 
