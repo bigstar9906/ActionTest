@@ -18,10 +18,8 @@ pipeline {
                 ./gradlew clean build
                 cd build/libs
                 ls
+                chmod +x demo-0.0.1-SNAPSHOT.jar
                 '''
-            sh('cd ../')
-            sh('cd libs')
-            sh('chmod +x demo-0.0.1-SNAPSHOT.jar')
             sh('BUILD_ID=dontkillME && nohup java -jar demo-0.0.1-SNAPSHOT.jar &')
 		}
 	}	 
